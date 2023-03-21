@@ -7,14 +7,14 @@ exports.verifyToken = (req, res, next) => {
 
     if (token !== undefined) {
         
-        jwt.verify(token, jwtKey, (error, decoded) => {
+        jwt.verify(token, jwtKey, (error, payload) => {
             if (error) {
                 res.status(403);
                 console.log(error);
                 res.json({ message: "Token invalide." });
             }
             else {
-                req.user = decoded;
+                req.user = payload.user;
                 next();
             }
         })
@@ -25,3 +25,4 @@ exports.verifyToken = (req, res, next) => {
         
         }
 }
+

@@ -1,12 +1,20 @@
 const db = require("../../db");
 
-// Récupération de tous les utilisateurs
+
+
+
 exports.getAllUsers = function(req, res) {
     db.query('SELECT * FROM users', function(error, results) {
         if (error) throw error;
         res.json(results);
     });
 };
+
+
+
+
+
+
 
 // Récupère un utilisateur par son ID
 exports.getUserById = function(req, res) {

@@ -1,6 +1,9 @@
 const db = require('../../db');
 
+
 // Récupération de tous les tips
+
+
 exports.getAllTips = function(req, res) {
   db.query('SELECT * FROM tableTips', function(error, results) {
     if (error) throw error;
@@ -15,6 +18,8 @@ exports.getTotalTipsByMonth = function(req, res) {
     res.json(results);
   });
 };
+
+
 
 // Récupération d'un tip par son ID
 exports.getTipById = function(req, res) {
@@ -34,6 +39,7 @@ exports.createTip = function(req, res) {
   });
 };
 
+
 // Mise à jour d'un tip par son ID
 exports.updateTip = function(req, res) {
   const { tips, id_restaurantTable, tipId} = req.body;
@@ -51,6 +57,9 @@ exports.deleteTip = function(req, res) {
     res.json({ message: 'Tip deleted successfully.' });
   });
 };
+
+
+
 
 // get tous les tips du service actuel. select * from tabletips where shiftclosed = 0 en affichant aussi la donnée shifttype
 exports.getTipServiceUp = function(req, res) {

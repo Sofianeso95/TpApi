@@ -1,6 +1,8 @@
 module.exports = (server) => {
     const paymentController = require('../controllers/paymentController');
 
+    const middleware = require("../midllewares/jwtMidlleware");
+
     
     server.get('/payments', paymentController.getAllPayments);
 

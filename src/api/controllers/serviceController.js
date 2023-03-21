@@ -1,4 +1,5 @@
 const db = require("../../db");
+
 // Récupère  tous les services
 exports.getAllServices = function(req, res) {
     db.query('SELECT * FROM services', function(error, results) {
@@ -7,7 +8,7 @@ exports.getAllServices = function(req, res) {
     });
 };
 
-// Récupère un service par son ID
+
 exports.getServiceById = function(req, res) {
     const serviceId = req.params.id;
     db.query('SELECT * FROM services WHERE id = ?', [serviceId], function(error, results) {
@@ -34,6 +35,11 @@ exports.updateService = function(req, res) {
         res.json({ message: 'Service updated successfully.' });
     });
 };
+
+
+
+
+
 
 // Supprimer un service par son ID
 exports.deleteService = function(req, res) {
