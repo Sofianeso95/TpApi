@@ -5,7 +5,7 @@ let db = mysql.createConnection({
     port: '3306',
     user: 'root1',
     password: '',
-    database: 'Api',
+    database: 'api',
     socketPath:'/Applications/MAMP/tmp/mysql/mysql.sock',
 })
 
