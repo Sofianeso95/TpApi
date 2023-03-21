@@ -1,5 +1,5 @@
 const db = require("../../db");
-// Récupération de tous les services
+// Récupère  tous les services
 exports.getAllServices = function(req, res) {
     db.query('SELECT * FROM services', function(error, results) {
         if (error) throw error;
@@ -7,7 +7,7 @@ exports.getAllServices = function(req, res) {
     });
 };
 
-// Récupération d'un service par son ID
+// Récupère un service par son ID
 exports.getServiceById = function(req, res) {
     const serviceId = req.params.id;
     db.query('SELECT * FROM services WHERE id = ?', [serviceId], function(error, results) {
@@ -52,7 +52,7 @@ exports.getServiceUsers = function(req,res) {
 }
 
 
-// récupération du service actuel pour le front 
+// récupère le service actuel pour le front 
 exports.getServiceUp = function(req,res) {
     qd.query('SELECT * FROM `services` WHERE `shiftClosed` = 0',  function(error, results) {
         if (error) throw error;

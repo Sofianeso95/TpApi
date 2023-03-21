@@ -1,6 +1,6 @@
 const db = require('../../db');
 
-// Récupération de tous les tips
+// Récupère tous les tips
 exports.getAllTips = function(req, res) {
   db.query('SELECT * FROM tableTips', function(error, results) {
     if (error) throw error;
@@ -8,7 +8,7 @@ exports.getAllTips = function(req, res) {
   });
 };
 
-// Récupération d'un tip par son ID
+// Récupère un tip par son ID
 exports.getTipById = function(req, res) {
   const tipId = req.params.id;
   db.query('SELECT * FROM tableTips WHERE id = ?', [tipId], function(error, results) {
@@ -17,7 +17,7 @@ exports.getTipById = function(req, res) {
   });
 };
 
-// Création d'un nouveau tip // variable dans front pour remplacer le ID Service
+// Créeun nouveau tip // variable dans front pour remplacer le ID Service
 exports.createTip = function(req, res) {
   const { tips, id_restaurantTable, id_service } = req.body;
   db.query('INSERT INTO tableTips (tips, id_restaurantTable, id_service) VALUES (?, ?, ?)', [tips, id_restaurantTable, id_service], function(error, results) {

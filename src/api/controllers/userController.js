@@ -8,7 +8,7 @@ exports.getAllUsers = function(req, res) {
     });
 };
 
-// Récupération d'un utilisateur par son ID
+// Récupère un utilisateur par son ID
 exports.getUserById = function(req, res) {
     const userId = req.params.id;
     db.query('SELECT * FROM users WHERE id = ?', [userId], function(error, results) {
@@ -17,7 +17,7 @@ exports.getUserById = function(req, res) {
     });
 };
 
-// Création d'un nouvel utilisateur
+// Crée un nouvel utilisateur
 exports.createUser = function(req, res) {
     const { firstname, lastname, status, active } = req.body;
     db.query('INSERT INTO users (firstname, lastname, status, active) VALUES (?, ?, ?, ?)', [firstname, lastname, status, active], function(error, results) {
