@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "f6dbf6b0-4d21-4c62-8c20-87ef558e710e",
+		"name": "tp_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25503428"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "LOGIN TO ADMIN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pin",
+									"value": "321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users/verifAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"verifAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "sofiane",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "chila",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "services/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "services",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "shiftType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "shiftClosed",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/services",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tips",
+			"item": [
+				{
+					"name": "tips",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "kari",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "cdg",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/payments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tips/tipService",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/tipService",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"tipService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tips/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tips/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payments/user/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaW4iOiIxMjMiLCJpYXQiOjE2Nzk0OTEyOTIsImV4cCI6MTY3OTQ5NDg5Mn0.dddJl3-ccnGNWTWTvz5U42paYEd4lGEOK4RGVZbFVVM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pin",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/payments/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tips/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tips",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tips",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "id_restaurantTable",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id_service",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/payments?amount=30&id_user=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/payments?amount=30&id_user=2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "30"
+								},
+								{
+									"key": "id_user",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
