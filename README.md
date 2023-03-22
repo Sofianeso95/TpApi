@@ -51,6 +51,7 @@ L'API est sécurisée avec une authentification JWT pour les administrateurs.
 
 
 ## Commande de base Git
+---------------------------
 
 ```bash
 1: git status
