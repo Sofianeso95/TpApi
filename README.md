@@ -1,6 +1,8 @@
 # tpApi
 
-tpApi est un projet Node.js qui permet de 
+tpApi est un projet Node.js qui permet de l'ajout et le calcule de pourboire
+
+voici le figma: https://www.figma.com/proto/kTIXf3BuUPkAywpgxR2UuE/Indy-Pourboire-VFinal?page-id=11%3A9160&node-id=183%3A5246&viewport=241%2C48%2C0.12&scaling=scale-down&starting-point-node-id=183%3A5246&show-proto-sidebar=1
 
 ## Installation
 -----------------
@@ -38,12 +40,24 @@ Le dossier src contient les contrôleurs et les routes de l'API. Vous pouvez ajo
 
 L'API écoute maintenant sur le port configuré et peut être consultée à partir d'un outil de test d'API tel que POSTMANE.
 
+Une bibliothèque postman est disponible dans le fichier "postmane"
+
 
 
 ## Sécurité
 ----------------
 
 L'API est sécurisée avec une authentification JWT pour les administrateurs.
+
+
+## Commande de base Git
+
+```bash
+1: git status
+2: git add . (Git add nom du fichier)
+3: git commit -m ‘’nom du commit’’
+4: git push
+``` 
 
 
 ## Contribuer
