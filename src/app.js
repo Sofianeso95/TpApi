@@ -1,5 +1,10 @@
 const express = require("express");
+const dotenv = require('dotenv');
+dotenv.config();
+
 const db = require('./db');
+
+
 
 const hostname = "0.0.0.0";
 const port = 3000;
@@ -20,8 +25,9 @@ db.query('SELECT * FROM users', (err, rows) => {
     console.log(rows);
   });
 
-//server.set("db", db);
-server.use(express.urlencoded({ extended: true }));// url encodé pour save les données encodé dans des fichiers json
+
+server.use(express.urlencoded({ extended: true }));
+
 server.use(express.json());
 
 const paymentRoute = require("./api/routes/paymentRoute");
@@ -35,5 +41,9 @@ userRoute(server);
 
 const serviceRoute = require("./api/routes/servicesRoute");
 serviceRoute(server);
+
+
+
+
 
 server.listen(port, hostname);

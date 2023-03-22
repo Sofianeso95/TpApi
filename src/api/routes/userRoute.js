@@ -2,6 +2,12 @@ module.exports = (server) => {
     const userController = require('../controllers/userController');
     
     
+
+
+
+    server.get("/users/verifAdmin", userController.verifAdmin);
+
+    
     server.get('/users', userController.getAllUsers);
     
     
